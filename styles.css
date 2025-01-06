@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Doto&display=swap");
+
+body {
+   background-color: #061204;
+   color: #e3efdf;
+   font-family: "Doto", serif;
+   margin-top: 40px;
+   display: grid;
+   place-items: center;
+}
+
+button {
+   cursor: pointer;
+}
+
+#rules {
+   display: grid;
+   place-items: center;
+}
+
+#confirmation_section {
+   display: grid;
+   place-items: center;
+}
+
+#num_clicks {
+   display: grid;
+   place-items: center;
+}
+
+#board div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#board button {
+   padding: 30px;
+   margin: 1px;
+}
+
+#board button.off {
+   background-color: #061204;
+}
+
+#board button.on {
+   background-color: #e3efdf;
+}
+
+#submit_board button {
+   padding: 10px;
+   margin: 10px;
+   font-size: 2rem;
+   font-family: "Doto", serif;
+   font-weight: 900;
+   border-radius: 50px;
+   background-color: #e3efdf;
+   border: 2px solid #e3efdf;
+   color: #061204;
+}
+
+#confirmation_section h2.win {
+   color: #069b04;
+}
+
+#confirmation_section h2.lose {
+   color: #a91204;
+}
+
+#confirmation_text1 {
+   margin-bottom: 0px;
+}
+
+form {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#replay_submit {
+   padding: 15px;
+   margin: 10px;
+   font-size: 2.5rem;
+   font-family: "Doto", serif;
+   font-weight: 900;
+   border-radius: 50px;
+   background-color: #e3efdf;
+   border: 2px solid #e3efdf;
+   color: #061204;
+   display: none;
+}
+
+.light_blue {
+   color: #0f88f6;
+}
+
+#generate_board h2 {
+   margin-top: 6px;
+   margin-bottom: 12px;
+}
+
+#generate_board {
+   display: grid;
+   place-items: center;
+}
+
+#generate_board button {
+   padding: 12px;
+   margin: 8px;
+   font-size: 1.5rem;
+   font-family: "Doto", serif;
+   font-weight: 900;
+   border-radius: 10px;
+   background-color: #e3efdf;
+   border: 2px solid #e3efdf;
+   color: #061204;
+}
+
+.initially_invisible {
+   display: none;
+}

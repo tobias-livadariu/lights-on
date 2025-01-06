@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Doto&display=swap");
+
+html {
+   font-size: 110%;
+}
+
+body {
+   background-color: #061204;
+   color: #e3efdf;
+   font-family: "Doto", serif;
+   margin-top: 40px;
+   display: grid;
+   place-items: center;
+}
+
+button {
+   font-family: "Doto", serif;
+   font-weight: 800;
+   background-color: #e3efdf; /* Light background */
+   color: #061204; /* Dark text */
+   border: 2px solid #e3efdf; /* Match theme */
+   border-radius: 5px; /* Rounded corners */
+   padding: 10px 20px; /* Add spacing */
+   font-size: 1.4rem; /* Adjusted size */
+   cursor: pointer; /* Pointer on hover */
+   transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for all buttons */
+button:hover {
+   background-color: #cfd9ce; /* Slightly darker background */
+   border-color: #cfd9ce; /* Match hover color */
+   transform: scale(1.05); /* Subtle hover scaling */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add depth */
+}
+
+/* Active effect for all buttons */
+button:active {
+   transform: scale(0.95); /* Pressed effect */
+   background-color: #bfcfc0; /* Darker for active state */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+}
+
+/* Specific style for reset buttons */
+#reset_board_button {
+   font-size: 1.6rem;
+   font-family: "Doto", serif;
+   font-weight: 800;
+   background-color: #e3efdf;
+   color: #061204;
+   border: 2px solid #061204;
+   border-radius: 40px;
+   cursor: pointer;
+   padding: 7px 14px;
+   transition: all 0.3s ease;
+}
+
+/* Add hover and active states for reset button */
+#reset_board_button:hover {
+   background-color: #cfd9ce;
+   transform: scale(1.1); /* Slight hover scale */
+}
+
+#reset_board_button:active {
+   transform: scale(0.95); /* Pressed effect */
+   background-color: #bfcfc0;
+}
+
+/* Generate Board Buttons */
+#generate_board button {
+   padding: 12px;
+   margin: 8px;
+   font-size: 1.5rem;
+   font-family: "Doto", serif;
+   font-weight: 900;
+   border-radius: 10px;
+   background-color: #e3efdf;
+   border: 2px solid #e3efdf;
+   color: #061204;
+   transition: all 0.3s ease;
+}
+
+#generate_board button:hover {
+   background-color: #cfd9ce;
+   transform: scale(1.05);
+}
+
+#generate_board button:active {
+   transform: scale(0.95);
+   background-color: #bfcfc0;
+}
+
+hr {
+   border: 0;
+   height: 4px;
+   background: linear-gradient(to right, #035702, #e3efdf, #035702);
+   border-radius: 2px;
+   margin: 20px 0;
+   width: 80%;
+}
+
+.reversed_hr {
+   background: linear-gradient(to right, #e3efdf, #035702, #e3efdf);
+}
+
+#warning_text_container {
+   display: flex; /* Flexbox for centering */
+   justify-content: center; /* Center content horizontally */
+   align-items: center; /* Center content vertically (optional for multiline text) */
+   width: 100%; /* Ensure it takes up full width of the form */
+   margin-bottom: 4.214%; /* Optional spacing from input field */
+}
+
+.text_danger {
+   color: #dc3545; /* Error text color */
+   font-size: 1rem; /* Adjust font size if needed */
+   text-align: center; /* Center the text itself */
+   margin: 0; /* Remove extra margins to avoid misalignment */
+}
+
+.styled_form {
+   display: flex;
+   flex-direction: column; /* Stack form elements vertically */
+   align-items: center; /* Center align elements */
+   font-size: 1.2rem; /* Slightly smaller font size for readability */
+   font-weight: 600; /* Moderate font weight */
+   background-color: #061204; /* Match background color of the app */
+   border: 2px solid #e3efdf; /* Light border to make the form stand out */
+   border-radius: 10px; /* Rounded corners */
+   padding: 20px; /* Add spacing inside the form */
+   margin-top: 20px; /* Separate from other content */
+   width: 80%; /* Make the form take a reasonable width */
+   max-width: 400px; /* Prevent it from becoming too wide */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+   position: absolute; /* Position relative to the container */
+   left: 50%; /* Move to the center horizontally */
+   transform: translateX(-50%) scale(1.1); /* Center and scale */
+   transform-origin: center; /* Scale from the center of the form */
+   box-sizing: border-box; /* Include border and padding in element's width/height */
+}
+
+.styled_form label {
+   margin-bottom: 8px; /* Space between labels and inputs */
+   color: #e3efdf; /* Match font color */
+   font-size: 1rem; /* Slightly smaller font for labels */
+   font-weight: 700; /* Bold labels */
+}
+
+.styled_form input {
+   width: 100%; /* Full width for inputs */
+   padding: 10px; /* Add padding for better usability */
+   margin-bottom: 15px; /* Space between inputs */
+   border: 2px solid #e3efdf; /* Match theme color */
+   border-radius: 5px; /* Smooth edges */
+   font-size: 1rem; /* Match font size */
+   background-color: #061204; /* Match background color */
+   color: #e3efdf; /* Match text color */
+}
+
+.styled_form input:focus {
+   outline: none; /* Remove default focus outline */
+   border-color: #069b04; /* Highlight border color on focus */
+   box-shadow: 0 0 5px #069b04; /* Add glow effect */
+}
+
+.styled_form button {
+   font-family: "Doto", serif;
+   font-weight: 800;
+   background-color: #e3efdf; /* Light background */
+   color: #061204; /* Dark text */
+   border: 2px solid #e3efdf; /* Match theme */
+   border-radius: 5px; /* Rounded corners */
+   padding: 10px 20px; /* Add spacing */
+   font-size: 1.4rem; /* Match font size */
+   font-weight: 700; /* Bold text */
+   cursor: pointer; /* Pointer on hover */
+   transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.styled_form button:hover {
+   background-color: #cfd9ce; /* Slightly darker on hover */
+   border-color: #cfd9ce; /* Match background color */
+}
+
+.styled_form button:active {
+   transform: scale(0.95); /* Slight press effect */
+}
+
+#rules {
+   display: grid;
+   place-items: center;
+}
+
+#confirmation_section {
+   display: grid;
+   place-items: center;
+}
+
+#board {
+   display: grid;
+   grid-template-columns: repeat(
+      3,
+      80px
+   ); /* Adjust columns dynamically in JS */
+   gap: 4px; /* Equal spacing for rows and columns */
+   justify-content: center;
+   align-items: center;
+}
+
+#board button {
+   width: 80px; /* Button size */
+   height: 80px;
+   line-height: 80px; /* Match button height for vertical alignment */
+   padding: 0;
+   margin: 0;
+   display: flex; /* Use flex for centering content inside button */
+   align-items: center; /* Center content vertically */
+   justify-content: center; /* Center content horizontally */
+   box-sizing: border-box;
+}
+
+/* #board div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#board button {
+   padding: 30px;
+   margin: 1px;
+} */
+
+#board button.off {
+   background-color: #061204;
+}
+
+#board button.on {
+   background-color: #e3efdf;
+}
+
+#submit_board {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#submit_board button {
+   padding: 10px;
+   margin: 10px;
+   font-size: 2rem;
+   font-family: "Doto", serif;
+   font-weight: 900;
+   border-radius: 50px;
+   background-color: #e3efdf;
+   border: 2px solid #e3efdf;
+   color: #061204;
+}
+
+#confirmation_section h2.win {
+   color: #069b04;
+}
+
+#confirmation_section h2.lose {
+   color: #a91204;
+}
+
+#confirmation_text1 {
+   margin-bottom: 0px;
+}
+
+#confirmation_text2 {
+   margin-bottom: 0px;
+}
+
+#replay {
+   display: grid;
+   place-items: center;
+}
+
+#replay_submit {
+   padding: 15px;
+   margin: 10px;
+   font-size: 2.5rem;
+   font-family: "Doto", serif;
+   font-weight: 900;
+   border-radius: 50px;
+   background-color: #e3efdf;
+   border: 2px solid #e3efdf;
+   color: #061204;
+}
+
+.light_blue {
+   color: #0f88f6;
+}
+
+.light_green {
+   color: #e3efdf;
+}
+
+.vibrant_orange {
+   color: #ffa500;
+}
+
+#generate_board h2 {
+   margin-top: 6px;
+   margin-bottom: 12px;
+}
+
+#generate_board {
+   display: grid;
+   place-items: center;
+}
+
+#generate_board button {
+   padding: 12px;
+   margin: 8px;
+   font-size: 1.5rem;
+   font-family: "Doto", serif;
+   font-weight: 900;
+   border-radius: 10px;
+   background-color: #e3efdf;
+   border: 2px solid #e3efdf;
+   color: #061204;
+}
+
+#title_section {
+   display: grid;
+   place-items: center;
+}
+
+#game_stats {
+   display: grid;
+   place-items: center;
+   margin-bottom: 1.3%;
+}
+
+#num_clicks_text {
+   margin-top: 1.5%;
+   margin-bottom: 0.5%;
+}
+
+#time_taken_text {
+   margin-top: 0.5%;
+   margin-bottom: 2%;
+}
+
+#reset_board_button {
+   margin-left: 10px;
+   padding: 7px 14px;
+   font-size: 1.6rem;
+   font-family: "Doto", serif;
+   font-weight: 800;
+   background-color: #e3efdf;
+   color: #061204;
+   border: 2px solid #061204;
+   border-radius: 40px;
+   cursor: pointer;
+}
+
+#reset_board_button:hover {
+   background-color: #cfd9ce;
+}
+
+#saved_games {
+   place-items: center;
+}
+
+#upper_saved_games_hr {
+   margin-top: 2.5%;
+   margin-bottom: 2%;
+}
+
+#top_scores_title {
+   margin-bottom: 0%;
+}
+
+#top_scored_list {
+   margin-top: 1.3%;
+   font-size: 1.5rem;
+   font-weight: 600;
+}
+
+#stats_title {
+   margin-bottom: 1.3%;
+}
+
+#score_text {
+   margin: 1.3%;
+}
+
+#rank_text {
+   margin: 1.3%;
+   margin-bottom: 1.3%;
+}
