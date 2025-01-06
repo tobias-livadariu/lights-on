@@ -8,7 +8,7 @@ const TitleSection = () => {
             {/* Div for styling and structuring the title */}
             <div id="title_section">
                {/* Main title of the game */}
-               <h1>Welcome to my Silly Button Game!</h1>
+               <h1>Welcome to Lights On!</h1>
             </div>
          </header>
       </div>
