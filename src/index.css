@@ -1,394 +1,402 @@
 @import url("https://fonts.googleapis.com/css2?family=Doto&display=swap");
+/* Importing the "Doto" font from Google Fonts */
 
 html {
-   font-size: 110%;
+   font-size: 110%; /* Base font size slightly larger for better readability */
 }
 
 body {
-   background-color: #061204;
-   color: #e3efdf;
-   font-family: "Doto", serif;
-   margin-top: 40px;
-   display: grid;
-   place-items: center;
+   background-color: #061204; /* Dark green background */
+   color: #e3efdf; /* Light text color for contrast */
+   font-family: "Doto", serif; /* Using the imported "Doto" font */
+   margin-top: 40px; /* Adding space at the top of the page */
+   display: grid; /* Using grid layout to center content */
+   place-items: center; /* Aligning items both horizontally and vertically */
 }
 
 button {
-   font-family: "Doto", serif;
-   font-weight: 800;
-   background-color: #e3efdf; /* Light background */
-   color: #061204; /* Dark text */
-   border: 2px solid #e3efdf; /* Match theme */
-   border-radius: 5px; /* Rounded corners */
-   padding: 10px 20px; /* Add spacing */
-   font-size: 1.4rem; /* Adjusted size */
-   cursor: pointer; /* Pointer on hover */
-   transition: all 0.3s ease; /* Smooth hover effect */
+   font-family: "Doto", serif; /* Ensuring buttons use the "Doto" font */
+   font-weight: 800; /* Bold font weight for emphasis */
+   background-color: #e3efdf; /* Light button background for contrast */
+   color: #061204; /* Dark button text for readability */
+   border: 2px solid #e3efdf; /* Border matching the button background */
+   border-radius: 5px; /* Adding rounded corners for a softer look */
+   padding: 10px 20px; /* Adding padding for consistent spacing */
+   font-size: 1.4rem; /* Slightly larger font size for button text */
+   cursor: pointer; /* Pointer cursor to indicate interactivity */
+   transition: all 0.3s ease; /* Smooth transitions for hover and active states */
 }
 
 /* Hover effect for all buttons */
 button:hover {
-   background-color: #cfd9ce; /* Slightly darker background */
-   border-color: #cfd9ce; /* Match hover color */
-   transform: scale(1.05); /* Subtle hover scaling */
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add depth */
+   background-color: #cfd9ce; /* Slightly darker background on hover */
+   border-color: #cfd9ce; /* Matching border color to the hover background */
+   transform: scale(1.05); /* Adding a slight scaling effect on hover */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adding depth with a shadow */
 }
 
-/* Active effect for all buttons */
+/* Active (pressed) effect for all buttons */
 button:active {
-   transform: scale(0.95); /* Pressed effect */
-   background-color: #bfcfc0; /* Darker for active state */
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+   transform: scale(0.95); /* Reducing size slightly to indicate pressing */
+   background-color: #bfcfc0; /* Darker background when button is active */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow for pressed state */
 }
 
-/* Specific style for reset buttons */
+/* Styling for the reset board button */
 #reset_board_button {
-   font-size: 1.6rem;
-   font-family: "Doto", serif;
-   font-weight: 800;
-   background-color: #e3efdf;
-   color: #061204;
-   border: 2px solid #061204;
-   border-radius: 40px;
-   cursor: pointer;
-   padding: 7px 14px;
-   transition: all 0.3s ease;
+   font-size: 1.6rem; /* Larger font size for emphasis */
+   font-family: "Doto", serif; /* Ensuring font consistency */
+   font-weight: 800; /* Bold font weight for prominence */
+   background-color: #e3efdf; /* Light background color for the reset button */
+   color: #061204; /* Dark text for contrast */
+   border: 2px solid #061204; /* Darker border for distinction */
+   border-radius: 40px; /* Highly rounded corners for a unique style */
+   cursor: pointer; /* Pointer cursor to indicate button interactivity */
+   padding: 7px 14px; /* Compact padding for a neat appearance */
+   transition: all 0.3s ease; /* Smooth transition effects for hover and active states */
 }
 
-/* Add hover and active states for reset button */
+/* Hover state for the reset board button */
 #reset_board_button:hover {
-   background-color: #cfd9ce;
-   transform: scale(1.1); /* Slight hover scale */
+   background-color: #cfd9ce; /* Slightly darker background on hover */
+   transform: scale(1.1); /* Adding a more pronounced scaling effect */
 }
 
+/* Active (pressed) state for the reset board button */
 #reset_board_button:active {
-   transform: scale(0.95); /* Pressed effect */
-   background-color: #bfcfc0;
+   transform: scale(0.95); /* Slightly reduced size to indicate pressing */
+   background-color: #bfcfc0; /* Darker background for the active state */
 }
 
 /* Generate Board Buttons */
 #generate_board button {
-   padding: 12px;
-   margin: 8px;
-   font-size: 1.5rem;
-   font-family: "Doto", serif;
-   font-weight: 900;
-   border-radius: 10px;
-   background-color: #e3efdf;
-   border: 2px solid #e3efdf;
-   color: #061204;
-   transition: all 0.3s ease;
+   padding: 12px; /* Inner spacing for button content */
+   margin: 8px; /* Outer spacing between buttons */
+   font-size: 1.5rem; /* Larger text size for visibility */
+   font-family: "Doto", serif; /* Consistent font for buttons */
+   font-weight: 900; /* Bold font for emphasis */
+   border-radius: 10px; /* Smooth rounded corners for aesthetics */
+   background-color: #e3efdf; /* Light background for contrast */
+   border: 2px solid #e3efdf; /* Matching border for consistent look */
+   color: #061204; /* Dark text for readability */
+   transition: all 0.3s ease; /* Smooth transition for hover and active states */
 }
 
+/* Hover state for Generate Board Buttons */
 #generate_board button:hover {
-   background-color: #cfd9ce;
-   transform: scale(1.05);
+   background-color: #cfd9ce; /* Slightly darker background for hover effect */
+   transform: scale(1.05); /* Slight scaling effect on hover for feedback */
 }
 
+/* Active (pressed) state for Generate Board Buttons */
 #generate_board button:active {
-   transform: scale(0.95);
-   background-color: #bfcfc0;
+   transform: scale(0.95); /* Slight shrink effect to indicate pressing */
+   background-color: #bfcfc0; /* Darker background when button is pressed */
 }
 
+/* Horizontal Rule (divider) */
 hr {
-   border: 0;
-   height: 4px;
-   background: linear-gradient(to right, #035702, #e3efdf, #035702);
-   border-radius: 2px;
-   margin: 20px 0;
-   width: 80%;
+   border: 0; /* No default border */
+   height: 4px; /* Thickness of the line */
+   background: linear-gradient(
+      to right,
+      #035702,
+      #e3efdf,
+      #035702
+   ); /* Gradient color for a decorative look */
+   border-radius: 2px; /* Smooth rounded edges */
+   margin: 20px 0; /* Vertical spacing above and below */
+   width: 80%; /* Line width relative to the parent container */
 }
 
+/* Reversed Horizontal Rule (decorative) */
 .reversed_hr {
-   background: linear-gradient(to right, #e3efdf, #035702, #e3efdf);
+   background: linear-gradient(
+      to right,
+      #e3efdf,
+      #035702,
+      #e3efdf
+   ); /* Gradient reversed for visual variation */
 }
 
+/* Container for warning text (e.g., error messages) */
 #warning_text_container {
-   display: flex; /* Flexbox for centering */
+   display: flex; /* Flexbox for flexible layout */
    justify-content: center; /* Center content horizontally */
-   align-items: center; /* Center content vertically (optional for multiline text) */
-   width: 100%; /* Ensure it takes up full width of the form */
-   margin-bottom: 4.214%; /* Optional spacing from input field */
+   align-items: center; /* Center content vertically */
+   width: 100%; /* Full width of the parent container */
+   margin-bottom: 4.214%; /* Spacing below the container */
 }
 
+/* Styling for error/warning text */
 .text_danger {
-   color: #dc3545; /* Error text color */
-   font-size: 1rem; /* Adjust font size if needed */
-   text-align: center; /* Center the text itself */
-   margin: 0; /* Remove extra margins to avoid misalignment */
+   color: #dc3545; /* Red color for error messages */
+   font-size: 1rem; /* Standard font size for text */
+   text-align: center; /* Center-align the text */
+   margin: 0; /* No extra margins for precise alignment */
 }
 
+/* Styling for forms */
 .styled_form {
-   display: flex;
+   display: flex; /* Flexbox layout for form elements */
    flex-direction: column; /* Stack form elements vertically */
-   align-items: center; /* Center align elements */
-   font-size: 1.2rem; /* Slightly smaller font size for readability */
-   font-weight: 600; /* Moderate font weight */
-   background-color: #061204; /* Match background color of the app */
-   border: 2px solid #e3efdf; /* Light border to make the form stand out */
-   border-radius: 10px; /* Rounded corners */
-   padding: 20px; /* Add spacing inside the form */
-   margin-top: 20px; /* Separate from other content */
-   width: 80%; /* Make the form take a reasonable width */
-   max-width: 400px; /* Prevent it from becoming too wide */
+   align-items: center; /* Center-align form elements */
+   font-size: 1.2rem; /* Slightly smaller text for readability */
+   font-weight: 600; /* Medium font weight for balance */
+   background-color: #061204; /* Matching the app's dark background */
+   border: 2px solid #e3efdf; /* Light border for distinction */
+   border-radius: 10px; /* Rounded corners for a modern look */
+   padding: 20px; /* Inner padding for spacing */
+   margin-top: 20px; /* Top margin to separate from other content */
+   width: 80%; /* Form width relative to the parent container */
+   max-width: 400px; /* Maximum width to avoid overly large forms */
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-   position: absolute; /* Position relative to the container */
-   left: 50%; /* Move to the center horizontally */
-   transform: translateX(-50%) scale(1.1); /* Center and scale */
-   transform-origin: center; /* Scale from the center of the form */
-   box-sizing: border-box; /* Include border and padding in element's width/height */
+   position: absolute; /* Absolute positioning relative to the parent */
+   left: 50%; /* Center horizontally */
+   transform: translateX(-50%) scale(1.1); /* Center and slightly scale up */
+   transform-origin: center; /* Scaling starts from the center */
+   box-sizing: border-box; /* Include padding and border in width/height */
 }
 
 .styled_form label {
-   margin-bottom: 8px; /* Space between labels and inputs */
-   color: #e3efdf; /* Match font color */
-   font-size: 1rem; /* Slightly smaller font for labels */
-   font-weight: 700; /* Bold labels */
+   margin-bottom: 8px; /* Space between the label and the input field */
+   color: #e3efdf; /* Light font color to match the theme */
+   font-size: 1rem; /* Standard font size for labels */
+   font-weight: 700; /* Bold font for better readability */
 }
 
 .styled_form input {
-   width: 100%; /* Full width for inputs */
-   padding: 10px; /* Add padding for better usability */
-   margin-bottom: 15px; /* Space between inputs */
-   border: 2px solid #e3efdf; /* Match theme color */
-   border-radius: 5px; /* Smooth edges */
-   font-size: 1rem; /* Match font size */
-   background-color: #061204; /* Match background color */
-   color: #e3efdf; /* Match text color */
+   width: 100%; /* Input takes up the full width of the form */
+   padding: 10px; /* Internal spacing for better usability */
+   margin-bottom: 15px; /* Space below each input field */
+   border: 2px solid #e3efdf; /* Light border to match the theme */
+   border-radius: 5px; /* Smooth rounded edges */
+   font-size: 1rem; /* Standard font size for input text */
+   background-color: #061204; /* Dark background to match the app's theme */
+   color: #e3efdf; /* Light text color for readability */
 }
 
 .styled_form input:focus {
-   outline: none; /* Remove default focus outline */
-   border-color: #069b04; /* Highlight border color on focus */
-   box-shadow: 0 0 5px #069b04; /* Add glow effect */
+   outline: none; /* Remove default focus outline for a cleaner look */
+   border-color: #069b04; /* Highlight border with a green shade on focus */
+   box-shadow: 0 0 5px #069b04; /* Add a glow effect around the input */
 }
 
 .styled_form button {
-   font-family: "Doto", serif;
-   font-weight: 800;
-   background-color: #e3efdf; /* Light background */
-   color: #061204; /* Dark text */
-   border: 2px solid #e3efdf; /* Match theme */
-   border-radius: 5px; /* Rounded corners */
-   padding: 10px 20px; /* Add spacing */
-   font-size: 1.4rem; /* Match font size */
-   font-weight: 700; /* Bold text */
-   cursor: pointer; /* Pointer on hover */
-   transition: all 0.3s ease; /* Smooth hover effect */
+   font-family: "Doto", serif; /* Matching font for consistency */
+   font-weight: 800; /* Bold font for emphasis */
+   background-color: #e3efdf; /* Light background color for buttons */
+   color: #061204; /* Dark text for contrast */
+   border: 2px solid #e3efdf; /* Light border to match the theme */
+   border-radius: 5px; /* Smooth rounded corners */
+   padding: 10px 20px; /* Internal spacing for button text */
+   font-size: 1.4rem; /* Slightly larger font size for visibility */
+   font-weight: 700; /* Bold font for clarity */
+   cursor: pointer; /* Pointer cursor to indicate button is clickable */
+   transition: all 0.3s ease; /* Smooth transition for hover and active states */
 }
 
 .styled_form button:hover {
-   background-color: #cfd9ce; /* Slightly darker on hover */
-   border-color: #cfd9ce; /* Match background color */
+   background-color: #cfd9ce; /* Slightly darker background on hover for feedback */
+   border-color: #cfd9ce; /* Border color matches the hover background */
 }
 
 .styled_form button:active {
-   transform: scale(0.95); /* Slight press effect */
+   transform: scale(0.95); /* Slight shrink effect to indicate pressing */
 }
 
 #rules {
-   display: grid;
-   place-items: center;
+   display: grid; /* Use grid layout for uniform positioning */
+   place-items: center; /* Center content both horizontally and vertically */
 }
 
 #confirmation_section {
-   display: grid;
-   place-items: center;
+   display: grid; /* Use grid layout for consistency with other sections */
+   place-items: center; /* Center content within the section */
 }
 
 #board {
-   display: grid;
+   display: grid; /* Use grid layout to create a board structure */
    grid-template-columns: repeat(
       3,
       80px
-   ); /* Adjust columns dynamically in JS */
-   gap: 4px; /* Equal spacing for rows and columns */
-   justify-content: center;
-   align-items: center;
+   ); /* Create a 3-column layout with 80px-wide cells */
+   gap: 4px; /* Add consistent spacing between cells */
+   justify-content: center; /* Center the board horizontally */
+   align-items: center; /* Align the board vertically */
 }
 
 #board button {
-   width: 80px; /* Button size */
-   height: 80px;
-   line-height: 80px; /* Match button height for vertical alignment */
-   padding: 0;
-   margin: 0;
-   display: flex; /* Use flex for centering content inside button */
-   align-items: center; /* Center content vertically */
-   justify-content: center; /* Center content horizontally */
-   box-sizing: border-box;
+   width: 80px; /* Set button width to match grid cell size */
+   height: 80px; /* Set button height to match grid cell size */
+   line-height: 80px; /* Vertically center text or content */
+   padding: 0; /* Remove internal padding */
+   margin: 0; /* Remove external margin */
+   display: flex; /* Use flex layout to center content inside the button */
+   align-items: center; /* Vertically center content */
+   justify-content: center; /* Horizontally center content */
+   box-sizing: border-box; /* Include padding and border in the button's dimensions */
 }
-
-/* #board div {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-#board button {
-   padding: 30px;
-   margin: 1px;
-} */
 
 #board button.off {
-   background-color: #061204;
+   background-color: #061204; /* Dark background for "off" state */
 }
 
 #board button.on {
-   background-color: #e3efdf;
+   background-color: #e3efdf; /* Light background for "on" state */
 }
 
 #submit_board {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   display: flex; /* Use flexbox layout for alignment */
+   justify-content: center; /* Center content horizontally */
+   align-items: center; /* Center content vertically */
 }
 
 #submit_board button {
-   padding: 10px;
-   margin: 10px;
-   font-size: 2rem;
-   font-family: "Doto", serif;
-   font-weight: 900;
-   border-radius: 50px;
-   background-color: #e3efdf;
-   border: 2px solid #e3efdf;
-   color: #061204;
+   padding: 10px; /* Add padding inside the button */
+   margin: 10px; /* Add spacing around the button */
+   font-size: 2rem; /* Set font size for button text */
+   font-family: "Doto", serif; /* Use the "Doto" font */
+   font-weight: 900; /* Make text bold */
+   border-radius: 50px; /* Create a rounded button */
+   background-color: #e3efdf; /* Light background color */
+   border: 2px solid #e3efdf; /* Match border color with background */
+   color: #061204; /* Dark text color */
 }
 
 #confirmation_section h2.win {
-   color: #069b04;
+   color: #069b04; /* Green color for "win" messages */
 }
 
 #confirmation_section h2.lose {
-   color: #a91204;
+   color: #a91204; /* Red color for "lose" messages */
 }
 
 #confirmation_text1 {
-   margin-bottom: 0px;
+   margin-bottom: 0px; /* Remove bottom margin */
 }
 
 #confirmation_text2 {
-   margin-bottom: 0px;
+   margin-bottom: 0px; /* Remove bottom margin */
 }
 
 #replay {
-   display: grid;
-   place-items: center;
+   display: grid; /* Use grid layout for centering */
+   place-items: center; /* Center content horizontally and vertically */
 }
 
 #replay_submit {
-   padding: 15px;
-   margin: 10px;
-   font-size: 2.5rem;
-   font-family: "Doto", serif;
-   font-weight: 900;
-   border-radius: 50px;
-   background-color: #e3efdf;
-   border: 2px solid #e3efdf;
-   color: #061204;
+   padding: 15px; /* Add internal padding for the button */
+   margin: 10px; /* Add external spacing around the button */
+   font-size: 2.5rem; /* Set a large font size for the button text */
+   font-family: "Doto", serif; /* Apply the "Doto" font */
+   font-weight: 900; /* Make text very bold */
+   border-radius: 50px; /* Create a circular button appearance */
+   background-color: #e3efdf; /* Set a light background color */
+   border: 2px solid #e3efdf; /* Match the border color with the background */
+   color: #061204; /* Set the text color to a dark shade */
 }
 
 .light_blue {
-   color: #0f88f6;
+   color: #0f88f6; /* Light blue color for specific elements */
 }
 
 .light_green {
-   color: #e3efdf;
+   color: #e3efdf; /* Light green/white color matching the app theme */
 }
 
 .vibrant_orange {
-   color: #ffa500;
+   color: #ffa500; /* Vibrant orange color for emphasis */
 }
 
 #generate_board h2 {
-   margin-top: 6px;
-   margin-bottom: 12px;
+   margin-top: 6px; /* Add space above the heading */
+   margin-bottom: 12px; /* Add space below the heading */
 }
 
 #generate_board {
-   display: grid;
-   place-items: center;
+   display: grid; /* Use grid layout for alignment */
+   place-items: center; /* Center all child elements horizontally and vertically */
 }
 
 #generate_board button {
-   padding: 12px;
-   margin: 8px;
-   font-size: 1.5rem;
-   font-family: "Doto", serif;
-   font-weight: 900;
-   border-radius: 10px;
-   background-color: #e3efdf;
-   border: 2px solid #e3efdf;
-   color: #061204;
+   padding: 12px; /* Add internal padding to the button */
+   margin: 8px; /* Add spacing between buttons */
+   font-size: 1.5rem; /* Set font size for button text */
+   font-family: "Doto", serif; /* Apply the "Doto" font to button text */
+   font-weight: 900; /* Make button text extra bold */
+   border-radius: 10px; /* Create rounded corners for the button */
+   background-color: #e3efdf; /* Set a light background color */
+   border: 2px solid #e3efdf; /* Match the border color with the background */
+   color: #061204; /* Set the text color to dark */
 }
 
 #title_section {
-   display: grid;
-   place-items: center;
+   display: grid; /* Use grid layout for alignment */
+   place-items: center; /* Center content horizontally and vertically */
 }
 
 #game_stats {
-   display: grid;
-   place-items: center;
-   margin-bottom: 1.3%;
+   display: grid; /* Use grid layout to align elements */
+   place-items: center; /* Center the game stats text */
+   margin-bottom: 1.3%; /* Add spacing below the stats section */
 }
 
 #num_clicks_text {
-   margin-top: 1.5%;
-   margin-bottom: 0.5%;
+   margin-top: 1.5%; /* Add spacing above the text */
+   margin-bottom: 0.5%; /* Add spacing below the text */
 }
 
 #time_taken_text {
-   margin-top: 0.5%;
-   margin-bottom: 2%;
+   margin-top: 0.5%; /* Add spacing above the text */
+   margin-bottom: 2%; /* Add spacing below the text */
 }
 
 #reset_board_button {
-   margin-left: 10px;
-   padding: 7px 14px;
-   font-size: 1.6rem;
-   font-family: "Doto", serif;
-   font-weight: 800;
-   background-color: #e3efdf;
-   color: #061204;
-   border: 2px solid #061204;
-   border-radius: 40px;
-   cursor: pointer;
+   margin-left: 10px; /* Add spacing to the left of the button */
+   padding: 7px 14px; /* Add internal padding to the button */
+   font-size: 1.6rem; /* Set font size for button text */
+   font-family: "Doto", serif; /* Apply the "Doto" font to the button */
+   font-weight: 800; /* Make button text bold */
+   background-color: #e3efdf; /* Set a light background color */
+   color: #061204; /* Set the text color to dark */
+   border: 2px solid #061204; /* Set border color to dark */
+   border-radius: 40px; /* Create rounded button shape */
+   cursor: pointer; /* Display pointer cursor on hover */
 }
 
 #reset_board_button:hover {
-   background-color: #cfd9ce;
+   background-color: #cfd9ce; /* Change button background color on hover */
 }
 
 #saved_games {
-   place-items: center;
+   place-items: center; /* Center align content horizontally and vertically */
 }
 
 #upper_saved_games_hr {
-   margin-top: 2.5%;
-   margin-bottom: 2%;
+   margin-top: 2.5%; /* Add spacing above the horizontal rule */
+   margin-bottom: 2%; /* Add spacing below the horizontal rule */
 }
 
 #top_scores_title {
-   margin-bottom: 0%;
+   margin-bottom: 0%; /* Remove spacing below the title */
 }
 
 #top_scored_list {
-   margin-top: 1.3%;
-   font-size: 1.5rem;
-   font-weight: 600;
+   margin-top: 1.3%; /* Add spacing above the list */
+   font-size: 1.5rem; /* Set font size for the list items */
+   font-weight: 600; /* Set medium-bold font weight for the text */
 }
 
 #stats_title {
-   margin-bottom: 1.3%;
+   margin-bottom: 1.3%; /* Add spacing below the title */
 }
 
 #score_text {
-   margin: 1.3%;
+   margin: 1.3%; /* Add equal spacing above and below the text */
 }
 
 #rank_text {
-   margin: 1.3%;
-   margin-bottom: 1.3%;
+   margin: 1.3%; /* Add equal spacing above and below the text */
+   margin-bottom: 1.3%; /* Override bottom margin for consistent spacing */
 }
