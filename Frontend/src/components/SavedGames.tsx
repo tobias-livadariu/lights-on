@@ -88,7 +88,7 @@ const SavedGames = ({ boardSize, moveCount, elapsedTime }: SavedGamesProps) => {
       <div id="saved_games">
          <hr id="upper_saved_games_hr" />
          <h1 id="top_scores_title">
-            Top Scores for {boardSize}x{boardSize}:
+            Top 3 Scores for {boardSize}x{boardSize}:
          </h1>
          <ol id="top_scored_list">
             {Array.from({ length: 3 }).map((_, index) => {
