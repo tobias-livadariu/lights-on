@@ -43,7 +43,7 @@ const SavedGames = ({ boardSize, moveCount, elapsedTime }: SavedGamesProps) => {
       if (boardSize) {
          // Fetch top plays for the current board size
          axios
-            .get(`/api/top-plays`, { params: { boardSize } })
+            .get(`/lights-on/api/top-plays`, { params: { boardSize } })
             .then((response) => setTopPlays(response.data))
             .catch((error) =>
                console.error("Error fetching top plays:", error)
@@ -51,7 +51,7 @@ const SavedGames = ({ boardSize, moveCount, elapsedTime }: SavedGamesProps) => {
 
          // Fetch rank for the current score
          axios
-            .post(`/api/user-rank`, { score: currentScore, boardSize })
+            .post(`/lights-on/api/user-rank`, { score: currentScore, boardSize })
             .then((response) => setRank(response.data.rank))
             .catch((error) => console.error("Error fetching rank:", error));
       }
@@ -71,7 +71,7 @@ const SavedGames = ({ boardSize, moveCount, elapsedTime }: SavedGamesProps) => {
       };
 
       axios
-         .post(`/api/save-score`, payload)
+         .post(`/lights-on/api/save-score`, payload)
          .then(() => {
             setMessage("Saved!");
             setIsSaved(true);

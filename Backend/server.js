@@ -27,10 +27,10 @@ const connectDB = async () => {
 connectDB();
 
 // API routes
-app.use("/api", playRoutes);
+app.use("/lights-on/api", playRoutes);
 
 // Health check endpoint
-app.get("/api/health", (req, res) => {
+app.get("/lights-on/api/health", (req, res) => {
    res.status(200).json({ status: "OK", message: "Backend is running!" });
 });
 
